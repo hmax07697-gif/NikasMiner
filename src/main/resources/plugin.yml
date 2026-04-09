@@ -1,0 +1,45 @@
+name: VeinMiner
+version: '${project.version}'
+main: com.bpmaxlancer.veinminer.VeinMiner
+api-version: '1.19'
+author: bpmaxlancer
+description: Mine entire ore veins and tree logs with a single break
+website: https://github.com/bpmaxlancer/veinminer
+
+commands:
+  veinminer:
+    description: Main VeinMiner command
+    usage: /<command> [toggle|reload]
+    aliases: [vm]
+    permission: veinminer.toggle
+
+permissions:
+  veinminer.*:
+    description: Grants all VeinMiner permissions
+    default: op
+    children:
+      veinminer.toggle: true
+      veinminer.reload: true
+      veinminer.use.ores: true
+      veinminer.use.logs: true
+      veinminer.use.crops: true
+  
+  veinminer.toggle:
+    description: Allows toggling VeinMiner on/off
+    default: true
+  
+  veinminer.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  
+  veinminer.use.ores:
+    description: Allows using VeinMiner on ores
+    default: true
+  
+  veinminer.use.logs:
+    description: Allows using VeinMiner on logs
+    default: true
+  
+  veinminer.use.crops:
+    description: Allows using VeinMiner on crops
+    default: true

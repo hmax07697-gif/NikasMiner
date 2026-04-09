@@ -1,0 +1,72 @@
+# VeinMiner Configuration File
+# Customize settings, enabled blocks, and messages
+
+settings:
+  # Maximum number of blocks to break in one vein
+  max-blocks: 50
+  
+  # Cooldown in seconds between vein mining actions
+  cooldown: 2
+  
+  # Enable particle effects when vein mining
+  particles: true
+  
+  # Enable sound effects when vein mining
+  sounds: true
+
+# Block types that can be vein mined
+# Format: MATERIAL_NAME
+enabled-blocks:
+  # Ores - Requires veinminer.use.ores permission
+  ores:
+    - COAL_ORE
+    - DEEPSLATE_COAL_ORE
+    - IRON_ORE
+    - DEEPSLATE_IRON_ORE
+    - GOLD_ORE
+    - DEEPSLATE_GOLD_ORE
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - EMERALD_ORE
+    - DEEPSLATE_EMERALD_ORE
+    - LAPIS_ORE
+    - DEEPSLATE_LAPIS_ORE
+    - REDSTONE_ORE
+    - DEEPSLATE_REDSTONE_ORE
+    - COPPER_ORE
+    - DEEPSLATE_COPPER_ORE
+    - NETHER_QUARTZ_ORE
+    - NETHER_GOLD_ORE
+    - ANCIENT_DEBRIS
+  
+  # Logs - Requires veinminer.use.logs permission
+  logs:
+    - OAK_LOG
+    - SPRUCE_LOG
+    - BIRCH_LOG
+    - JUNGLE_LOG
+    - ACACIA_LOG
+    - DARK_OAK_LOG
+    - CRIMSON_STEM
+    - WARPED_STEM
+    - MANGROVE_LOG
+    - CHERRY_LOG
+  
+  # Crops - Requires veinminer.use.crops permission
+  crops:
+    - WHEAT
+    - CARROTS
+    - POTATOES
+    - BEETROOTS
+    - NETHER_WART
+
+# Customizable messages
+# Use & for color codes: &a = green, &c = red, &e = yellow, etc.
+# Placeholders: {time} for cooldown time remaining
+messages:
+  enabled: "&a✓ VeinMiner enabled!"
+  disabled: "&c✗ VeinMiner disabled!"
+  cooldown: "&eYou must wait {time} seconds before using VeinMiner again."
+  no-permission: "&cYou don't have permission to use VeinMiner on this block type."
+  reload: "&aVeinMiner configuration reloaded successfully!"
+  invalid-command: "&cUsage: /vm [toggle|reload]"
